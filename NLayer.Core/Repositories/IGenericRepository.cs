@@ -1,4 +1,5 @@
-﻿using System.Linq.Expressions;
+﻿using NLayer.Core.Models;
+using System.Linq.Expressions;
 
 namespace NLayer.Core.Repositories
 {
