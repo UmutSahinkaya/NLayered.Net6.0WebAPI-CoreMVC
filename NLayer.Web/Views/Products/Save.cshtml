@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Save";
+}
+@model ProductDto
+<h1>Save Product</h1>
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Save" method="post" asp-controller="Products">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+        </form>
+    </div>
+</div>
