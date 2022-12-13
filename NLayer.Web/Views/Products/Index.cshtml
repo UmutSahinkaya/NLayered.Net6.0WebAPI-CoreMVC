@@ -3,6 +3,7 @@
     ViewData["Title"] = "Index";
 }
 @model List<ProductWithCategoryDto>
+<a class="btn btn-primary" asp-controller="Products" asp-action="Save">New Product</a>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -12,6 +13,7 @@
     <td>Stock</td>
     <td>Category</td>
     <td>CreatedDate</td>
+    <td>Actions</td>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +25,10 @@
            <td>@item.Stock</td>
            <td>@item.Category.Name</td>
            <td>@item.CreatedDate</td>
+           <td>
+               <a class="btn btn-warning" asp-controller="Products" asp-action="Update" asp-route-id="@item.Id">Edit</a>
+                    <a class="btn btn-danger" asp-controller="Products" asp-action="Remove" asp-route-id="@item.Id">Delete</a>
+           </td>
             </tr>
         }
     </tbody>
