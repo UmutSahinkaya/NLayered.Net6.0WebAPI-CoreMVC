@@ -6,6 +6,7 @@ namespace NLayer.Core.Services
     {
         Task<T> GetByIdAsync(int id);
         Task<IEnumerable<T>> GetAllAsync();
+        
         //productRepository.where(x=>x.id>5).OrderBy??.ToListAsync();
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
         Task<bool> AnyAsync(Expression<Func<T, bool>> expression);
