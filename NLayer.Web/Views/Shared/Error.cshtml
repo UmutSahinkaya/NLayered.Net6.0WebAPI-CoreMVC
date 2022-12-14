@@ -6,12 +6,23 @@
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
 
+<<<<<<< Updated upstream
 @if(Model.Errors.Any())
+=======
+@if (Model.Errors.Any())
+>>>>>>> Stashed changes
 {
     <div class="alert alert-danger">
         @foreach (var item in Model.Errors)
         {
             <p>@item</p>
         }
+<<<<<<< Updated upstream
     </div>
 }
+=======
+
+
+    </div>
+}
+>>>>>>> Stashed changes

@@ -81,6 +81,11 @@ namespace NLayer.Web.Controllers
             return View(productDto);
 
         }
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
         public async Task<IActionResult> Remove(int id)
         {
             var product = await _service.GetByIdAsync(id);
@@ -90,6 +95,9 @@ namespace NLayer.Web.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     }
 }
