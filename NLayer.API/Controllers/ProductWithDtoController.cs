@@ -49,5 +49,21 @@ namespace NLayer.API.Controllers
         {
             return CreateActionResult(await _productServiceWithDto.RemoveAsync(id));
         }
+        [HttpPost("SaveAll")]
+        public async Task<IActionResult> Save(List<ProductDto> productsDtos)
+        {
+            return CreateActionResult(await _productServiceWithDto.AddRangeAsync(productsDtos));
+        }
+        [HttpDelete("RemoveAll")]
+        public async Task<IActionResult> RemoveAll(List<int> ids)
+        {
+            return CreateActionResult(await _productServiceWithDto.RemoveRangeAsync(ids));
+        }
+        [HttpGet("Any/{id}")]
+        public async Task<IActionResult> Any(int id)
+        {
+            return CreateActionResult(await _productServiceWithDto.AnyAsync(x=>x.Id==id));
+        }
+
     }
 }
